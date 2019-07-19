@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.14/lodash.min.js"></script>
+<script src="index.js"></script>
+<script src="words.js" charset="utf-8"></script>
+<link rel="stylesheet" href="index.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<body>
+
+<div ng-app="codeNames" ng-controller="gameController" class="main">
+    <div class="cards">
+        <div class="card-row" ng-repeat="cardRow in cards">
+            <div
+                    ng-repeat="card in cardRow"
+                    class="card {{card.agentType}}"
+                    ng-class="{active: card.active, selected: card.selected, opened: card.opened}"
+                    ng-click="card.opened = true">
+                {{card.word}}
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
