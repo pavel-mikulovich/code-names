@@ -15,7 +15,7 @@
                     ng-repeat="card in cardRow"
                     class="card {{card.agentType}}"
                     ng-class="{active: card.active, selected: card.selected, opened: card.opened}"
-                    ng-click="">
+                    ng-click="card.opened = true">
                 {{card.word}}
             </div>
         </div>
