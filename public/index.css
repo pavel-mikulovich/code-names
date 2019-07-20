@@ -15,11 +15,22 @@ body {
 .main {
     display: flex;
     flex: 1 0 0;
+    flex-direction: column;
+    max-width: 1000px;
+    max-height: 380px;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5px;
+}
+
+.actions.btn {
+
 }
 
 .cards {
-    max-width: 1000px;
-    max-height: 380px;
     display: flex;
     flex: 1 0 0;
     flex-direction: column;
